@@ -1,0 +1,15 @@
+.field{
+    margin-bottom: 1rem;
+    height: 3.75rem;
+    border-radius: 8px;
+    border: 1px solid var(--grey);
+    padding: 18px;
+  
+}
+
+
+.label{
+    font-size:0.875rem ;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
