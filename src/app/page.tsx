@@ -7,6 +7,7 @@ import { Form } from "@/components/Form";
 export default function Home() {
   return (
     <div className={style.container}>
+      <div className={style.box} >
       <div className={style.topImage}></div>
       <div className={style.wrapper}>
         <div className={style.wrapperTitle}>
@@ -29,6 +30,7 @@ export default function Home() {
           </li>
         </ul>
         <Form />
+      </div>
       </div>
     </div>
   );

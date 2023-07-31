@@ -13,13 +13,5 @@
 }
 
 
-body {
-  max-width: 1044vw;
-  background-color: var(--dark-grey);
-}
 
-@media (max-width: 560px) {
-  body {
-    background-color: var(--white);
-  }
-}
+
