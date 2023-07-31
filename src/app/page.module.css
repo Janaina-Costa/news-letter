@@ -67,7 +67,7 @@
     background-color: var(--white);
   }
   .box {
-    max-width: 100%;
+    width: 100%;
     
   }
   .topImage {
@@ -75,5 +75,31 @@
     background-size: cover;
     width: 100%;
   }
+}
+
+@media (min-width:541px){
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .topImage{
+    display: none;
+  }
+
+  .box{
+    border-radius: 16px;
+    padding: 2.5rem ;
+    display: grid;
+    grid-template-columns:32rem  1fr ;
+    
+}
+.rightImage{
+  background:local url('../../public/illustration-sign-up-desktop.svg');
+  background-size: cover;
+  width: 100%;
+  border-bottom-left-radius:16px ;
+  border-bottom-right-radius: 16px;
+}
 }
  

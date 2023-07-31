@@ -31,6 +31,7 @@ export default function Home() {
         </ul>
         <Form />
       </div>
+      <div className={style.rightImage} ></div>
       </div>
     </div>
   );
