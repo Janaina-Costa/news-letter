@@ -6,9 +6,14 @@ import { Button } from "../Button";
 import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useSelector } from "react-redux";
+import { selectEmail, setEmailState } from "@/redux/features/email/emailSlice";
+import { useDispatch } from "react-redux";
 
 export const Form = () => {
-  const [email, setEmail] = useState("");
+  
+  const {email} = useSelector(selectEmail)
+  const dispatch = useDispatch()
 
   const formik = useFormik({
     initialValues: {
@@ -20,7 +25,7 @@ export const Form = () => {
         .required("Email required"),
     }),
     onSubmit: (values) => {
-      setEmail(values.email);
+      dispatch(setEmailState(values.email));
     },
   });
 
