@@ -5,6 +5,7 @@ interface IProps extends HTMLAttributes<HTMLInputElement> {
   value?: string;
   type: "text" | "submit" | "email";
   label?: string;
+  onchange:(e: any) => void;
 }
 
 export const Input = ({
@@ -12,6 +13,7 @@ export const Input = ({
   value,
   placeholder,
   label,
+  onchange
  
 }: IProps) => {
   return (
@@ -22,6 +24,8 @@ export const Input = ({
         value={value}
         placeholder={placeholder}
         className={(style.field)}
+        onChange={onchange}
+        required
        
       />
     </>
