@@ -1,11 +1,12 @@
 import { HTMLAttributes } from "react";
-import style from "./style.module.css";
+import styles from "./style.module.css";
 
 interface IProps extends HTMLAttributes<HTMLInputElement> {
   value?: string;
   type: "text" | "submit" | "email";
   label?: string;
-  onchange:(e: any) => void;
+  onchange: (e: any) => void;
+  
 }
 
 export const Input = ({
@@ -13,20 +14,21 @@ export const Input = ({
   value,
   placeholder,
   label,
-  onchange
- 
+  onchange,
+  id,
+  style
 }: IProps) => {
   return (
     <>
-      <label className={style.label}>{label}</label>
+      <label className={styles.label}>{label}</label>
       <input
         type={type}
         value={value}
         placeholder={placeholder}
-        className={(style.field)}
+        className={styles.field}
         onChange={onchange}
-        required
-       
+        id={id}
+        style={style}
       />
     </>
   );

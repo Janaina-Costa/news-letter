@@ -98,8 +98,8 @@
   background:local url('../../public/illustration-sign-up-desktop.svg');
   background-size: cover;
   width: 100%;
-  border-bottom-left-radius:16px ;
-  border-bottom-right-radius: 16px;
+  border-radius:16px ;
+
 }
 }
  
