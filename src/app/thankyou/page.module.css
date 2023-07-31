@@ -1,0 +1,109 @@
+.container {
+  width: 100vw; 
+  height: 100vh; 
+  background: var(--dark-grey);
+ 
+}
+.box{
+  width: 100%;
+  max-width: 60rem;
+  background: var(--white);
+  padding: 2.875rem 1.75rem 0;
+}
+
+.topImage {
+  height: 8rem;
+  position: relative;
+  margin-bottom:1.5rem ;
+}
+.topImage img{
+  position: absolute;
+  bottom: 0px;
+
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.wrapperTitle {
+  width: 100%;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  color: var(--dark-grey);
+  font-weight: 700;
+}
+
+.wrapperSubTitle {
+  width: 100%;
+  font-size: 1rem;
+  color: var(--mediun-grey);
+  margin-bottom: 1rem;
+}
+.wrapperSubTitle p {
+  line-height: 1.75rem;
+  font-weight: 400;
+}
+
+.listContent {
+  width: 100%;
+  list-style: none;
+  color: var(--mediun-grey);
+  margin-bottom: 1.5rem;
+}
+
+.listContent li {
+  display: flex;
+  
+  gap: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.listContent li img{
+  width: 24px;
+  height: 24px;
+}
+
+
+@media (max-width: 540px) {
+  .container{
+    background-color: var(--white);
+  }
+  .box {
+    width: 100%;
+    
+  }
+  .topImage {
+    
+    width: 100%;
+  }
+}
+
+@media (min-width:541px){
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .box{
+    border-radius: 16px;
+    padding: 2.5rem ;
+    display: grid;
+    grid-template-columns:32rem  1fr ;
+    
+}
+.rightImage{
+  background:local url('../../../public/illustration-sign-up-desktop.svg');
+  background-size: cover;
+  width: 100%;
+  border-radius:16px ;
+
+}
+}
+ 
