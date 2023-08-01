@@ -1,5 +1,5 @@
-import { RootState } from '@/redux/store/store'
 import {createSlice} from '@reduxjs/toolkit'
+import { RootState } from '../store'
 
 interface EmailState{
     email: string
@@ -27,5 +27,4 @@ setEmailState
 }= emailSlice.actions
 
 export const selectEmail = (state:RootState)=>state.email
-
 export default emailSlice.reducer

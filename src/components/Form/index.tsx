@@ -3,17 +3,18 @@
 import style from "./style.module.css";
 import { Input } from "./Input";
 import { Button } from "../Button";
-import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useSelector } from "react-redux";
-import { selectEmail, setEmailState } from "@/redux/features/email/emailSlice";
-import { useDispatch } from "react-redux";
+import {  selectEmail, setEmailState } from "@/redux/features/emailSlice";
+import { useRouter } from "next/navigation";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+
 
 export const Form = () => {
-  
-  const {email} = useSelector(selectEmail)
-  const dispatch = useDispatch()
+  const {email} = useAppSelector(selectEmail)
+  const dispatch = useAppDispatch()
+  const router = useRouter()
+
 
   const formik = useFormik({
     initialValues: {
@@ -25,6 +26,7 @@ export const Form = () => {
         .required("Email required"),
     }),
     onSubmit: (values) => {
+      router.push('/thankyou')
       dispatch(setEmailState(values.email));
     },
   });

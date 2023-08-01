@@ -1,10 +1,25 @@
+"use client";
 
 import style from "./page.module.css";
 import Image from "next/image";
 import successIcon from '../../../public/icon-success.svg'
 import { Button } from "@/components/Button";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { reset, selectEmail } from "@/redux/features/emailSlice";
+import { useRouter } from "next/navigation";
 
 export default function Thankyou() {
+
+  const {email} = useAppSelector(selectEmail)
+  const dispatch = useAppDispatch()
+  const router = useRouter()
+  
+  const handleClick =()=>{
+    dispatch(reset())
+    router.back()
+
+  }
+
   return (
     <div className={style.container}>
       <div className={style.box} >
@@ -18,13 +33,13 @@ export default function Thankyou() {
             <div className={style.wrapperSubTitle}>
               <p>
                 A confirmation email has been sent to
-                <span> ash@company.com</span>. Please open it and
+                <span> {email}</span>. Please open it and
                 click the button inside to confirm your
                 subscription
               </p>
             </div>
           <div className={style.btn}>
-          <Button text="Dismiss message" />
+          <Button text="Dismiss message" onClick={handleClick} />
           </div>
         </div>
       </div>

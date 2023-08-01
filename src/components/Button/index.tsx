@@ -7,7 +7,7 @@ interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export const Button = ({ text, onClick, type }: IProps) => {
   return (
-    <button type={type} className={style.btn}>
+    <button type={type} className={style.btn} onClick={onClick} >
       {text}
     </button>
   );
