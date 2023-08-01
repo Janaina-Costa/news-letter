@@ -1,9 +1,7 @@
-'use client'
-import { store } from "@/redux/store/store";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
-import { Provider } from "react-redux";
+import { Providers } from "@/redux/provider";
 
 
 
@@ -26,9 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <Provider store={store}>
+        <Providers>
           {children}
-        </Provider>
+        </Providers>
       </body>
     </html>
   );

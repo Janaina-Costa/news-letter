@@ -9,6 +9,7 @@
   cursor: pointer;
   transition:  background 5s ease-in-out ;
   border: 0;
+  width: 100%;
   
 }
 .btn:hover {
