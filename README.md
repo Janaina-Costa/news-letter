@@ -28,7 +28,6 @@
 - CSS
 - Redux/toolkit
 - Git e Github
-- Mockit
 
 ## 💻 Projeto
 
