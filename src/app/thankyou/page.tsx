@@ -7,18 +7,18 @@ import { Button } from "@/components/Button";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { reset, selectEmail } from "@/redux/features/emailSlice";
 import { useRouter } from "next/navigation";
+import { memo, useCallback, useEffect } from "react";
 
-export default function Thankyou() {
-
+function Thankyou() {
   const {email} = useAppSelector(selectEmail)
   const dispatch = useAppDispatch()
   const router = useRouter()
+
   
-  const handleClick =()=>{
+  const handleClick =useCallback(()=>{
     dispatch(reset())
     router.back()
-
-  }
+  },[dispatch, router])
 
   return (
     <div className={style.container}>
@@ -46,3 +46,5 @@ export default function Thankyou() {
     </div>
   );
 }
+
+export default memo(Thankyou)
