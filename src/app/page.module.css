@@ -1,15 +1,16 @@
 .container {
-  width: 100vw; 
-  height: 100vh; 
+  width: 100vw;
+  height: 100vh;
   background: var(--dark-grey);
- 
+
 }
-.box{
+
+.box {
   width: 100%;
   max-width: 60rem;
   background: var(--white);
 }
-/*se for descktop deve sumir*/
+
 .topImage {
   height: 16rem;
   border-radius: 0px 0px 16px 16px;
@@ -34,9 +35,10 @@
 .wrapperSubTitle {
   width: 100%;
   font-size: 1rem;
-  color: var(--mediun-grey);
+  color: var(--medium-grey);
   margin-bottom: 1rem;
 }
+
 .wrapperSubTitle p {
   line-height: 1.75rem;
   font-weight: 400;
@@ -51,55 +53,59 @@
 
 .listContent li {
   display: flex;
-  
+
   gap: 1rem;
   line-height: 1.5rem;
   margin-bottom: 0.5rem;
 }
-.listContent li img{
+
+.listContent li img {
   width: 24px;
   height: 24px;
 }
 
 
 @media (max-width: 540px) {
-  .container{
+  .container {
     background-color: var(--white);
   }
+
   .box {
     width: 100%;
-    
+
   }
+
   .topImage {
-    background:local url("../../public/illustration-sign-up-mobile.svg") no-repeat;
+    background: local url("../../public/illustration-sign-up-mobile.svg") no-repeat;
     background-size: cover;
     width: 100%;
   }
 }
 
-@media (min-width:541px){
-  .container{
+@media (min-width:541px) {
+  .container {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .topImage{
+
+  .topImage {
     display: none;
   }
 
-  .box{
+  .box {
     border-radius: 16px;
-    padding: 2.5rem ;
+    padding: 2.5rem;
     display: grid;
-    grid-template-columns:32rem  1fr ;
-    
-}
-.rightImage{
-  background:local url('../../public/illustration-sign-up-desktop.svg');
-  background-size: cover;
-  width: 100%;
-  border-radius:16px ;
+    grid-template-columns: 32rem 1fr;
 
+  }
+
+  .rightImage {
+    background: local url('../../public/illustration-sign-up-desktop.svg');
+    background-size: cover;
+    width: 100%;
+    border-radius: 16px;
+
+  }
 }
-}
- 
